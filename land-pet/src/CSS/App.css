@@ -1,13 +1,13 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding:0;
+  padding: 0;
   font-family: "Lato", sans-serif;
 }
 
 img {
   height: auto;
-  max-width: 1005;
+  max-width: 100%;
 }
 
 .app {
@@ -18,30 +18,33 @@ img {
 }
 
 body {
-  background-color: fff;
+  background: #fff;
   overflow-x: hidden;
   max-width: 100%;
 }
 
-
-/*Nave*/
+/* ===== Navegação ===== */
 nav {
+  background: linear-gradient(to right, #f7b6c1, #fcdde3, #ffffff);
   align-items: center;
   display: flex;
   justify-content: space-between;
   min-height: 90px;
-
 }
-.navbar-links-contatiner a {
+
+.navbar-links-container a {
   color: black;
   font-size: 1.1rem;
   font-weight: 600;
   margin-right: 2rem;
-
+  outline: none;
+  text-decoration: none;
 }
+
 .navbar-menu-container {
   display: none;
 }
+
 .primary-button {
   background-color: rgba(247, 182, 193);
   border: none;
@@ -54,13 +57,23 @@ nav {
   padding: 0.8rem 1.75rem;
   transition: 0.3s;
 }
+
 .primary-button:hover {
-  background-color: yellow;
+  background-color: rgb(250, 150, 163);
 }
-/*Logo*/
+
+/* ===== Logo ===== */
 .nav-logo-container {
-  position: relative; 
+  margin-left: 2rem;
+  padding: 10px;
+  position: relative;
   display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.nav-logo-container:hover {
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 .img-arredondada {
@@ -70,12 +83,63 @@ nav {
 }
 
 .texto-sobre-imagem {
-  position: absolute;       /* sobre a imagem */
-  top: 50%;                 /* central vertical */
-  left: 150%;                /* central horizontal */
-  transform: translate(-50%, -50%); /* ajuste perfeito no centro */
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
   font-size: 24px;
-  text-shadow: 1px 1px 4px black; /* garante legibilidade */
+  text-shadow: 1px 1px 4px black;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .nav-logo-container{
+    max-width: 100px;
+  }
+  .navbar-links-container {
+    display: none;
+  }
+  .navbar-menu-container {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar-menu-container svg {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-menu-container {
+    display: none;
+  }
+}
+/*Logo*/
+.nav-logo-container {
+  margin-left: 2rem;
+  padding: 10px;
+  position: relative; 
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+.nav-logo-container:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+.img-arredondada {
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.texto-sobre-imagem { 
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 1px 1px 4px black;
 }
