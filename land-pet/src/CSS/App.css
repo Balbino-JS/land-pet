@@ -5,10 +5,10 @@
   font-family: "Lato", sans-serif;
 }
 
-img {
+/*img {
   height: auto;
   max-width: 100%;
-}
+}*/
 
 .app {
   margin: 0rem auto;
@@ -21,6 +21,9 @@ body {
   background: #fff;
   overflow-x: hidden;
   max-width: 100%;
+
+
+  
 }
 
 /* ===== Navegação ===== */
@@ -144,7 +147,7 @@ nav {
       margin-top: 1rem;
       margin-left: 0 ;
     }
-    .sencondary-button {
+    .secondary-button {
       align-items: center;
       display: flex;
       cursor: pointer;
@@ -154,11 +157,42 @@ nav {
   }
 
 /*RESPONSIVO NAVBAR*/
+
+/* ==== RESPONSIVO SOBRE ==== */
+   .about-section-container {
+    flex-direction: column; /* Mobile → empilha */
+    text-align: center;
+  }
+
+  .about-section-text-container {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .about-background-image-container {
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .about-background-image-container img {
+    max-width: 90%;
+    min-width: unset;
+  }
+
+  .about-section-text-container .primary-heading,
+  .about-section-text-container .primary-text {
+    max-width: 90%;
+  }
+
+
 @media (min-width: 769px) {
   .navbar-menu-container {
     display: none;
   }
 }
+
 /*Logo*/
 .nav-logo-container {
   margin-left: 2rem;
@@ -229,7 +263,7 @@ img:hover {
   max-width: 600px;
 
 }
-.sencondary-button {
+.secondary-button {
   align-items: center;
   background-color: rgba(247, 182, 193);
   border: none;
@@ -243,11 +277,170 @@ img:hover {
   padding: 10px;
   transition: 0.3s;
 }
-.sencondary-button:hover{
+.secondary-button:hover{
   background-color: rgb(250, 150, 163);
 }
 .primary-text {
   color: #6a6a6a;
   font-size: 1.25rem;
   margin: 1.5rem 0rem;
+}
+
+/* ==== ABOUT ==== */
+.about-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Desktop → texto à esquerda, imagem à direita */
+}
+
+.about-background-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* garante que a imagem fique colada à direita */
+}
+
+.about-background-image-container img {
+  max-width: 450px;
+  min-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.about-background-image-container img:hover {
+  transform: scale(1.05);
+}
+
+.about-section-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-section-text-container .primary-subheading {
+  color: rgb(253, 127, 148);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-section-text-container .primary-heading {
+  color: #4c4c4c;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.about-section-text-container .primary-text {
+  color: #6a6a6a;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+/* ==== INFO1 ==== */
+.info1-container {
+  background-color: #4c4c4c;
+  border: none;
+  border-radius: 30px;
+  margin: 4rem auto;
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+}
+
+.info1-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+/* Imagem à direita */
+.info1-section-container img {
+  align-self: flex-end;
+  flex: 1;
+  max-width: 35%;   /* controla tamanho da imagem */
+  height: auto;
+  border-radius: px;
+  object-fit: cover;
+}
+
+/* Texto à esquerda */
+.info1-text-container {
+  color: #f7b6c1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.info1-heading {
+  color: #ffffff;   /* branco para contraste com fundo escuro */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.primary-text {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ==== INFO2 ==== */
+.info2-container {
+  width: 100%;
+  height: 100vh; /* Ocupa a tela toda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background-blend-mode: lighten; /* ou try soft-light, overlay */
+  background-color: rgba(217, 217, 217, 0.8); /* cinza + transparência */
+  background-image: url(../assets/pantinhas-subindo-esquerda-removebg-preview-sem-fundos.png);
+  box-sizing: border-box;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.info2-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* limite para não esticar demais */
+  gap: 2rem;
+}
+
+.info2-image img {
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.info2-text { 
+  flex: 1;
+  text-align: center;
+}
+
+.info2-text h2 {
+  color: #fca8b9;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info2-text p {
+  color: rgb(62, 41, 82);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }

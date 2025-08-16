@@ -4,6 +4,10 @@ import './index.css';
 import App from './componentes/App.jsx';
 import Navbar from './componentes/Navbar.jsx';
 import Home from './componentes/Home.jsx';
+import About from './componentes/About.jsx';
+import Info1 from './componentes/Info1.jsx';
+import Info2 from './componentes/Info2.jsx';
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -11,5 +15,9 @@ createRoot(document.getElementById('root')).render(
     <App />
     <Navbar />
     <Home /> 
+    <Info1 />
+    <Info2 />
+    <About />
+    
   </StrictMode>
 );

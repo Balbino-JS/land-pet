@@ -34,7 +34,7 @@ function Navbar() {
             alt="logo pet shop"
             style={{ width: "75px", height: "auto", borderRadius: "1rem" }}
           />
-          <span className="texto-sobre-imagem">Pet Shop</span>
+          <span className="texto-sobre-imagem">Pet Hotel</span>
         </div>
 
         <div className="navbar-links-container">

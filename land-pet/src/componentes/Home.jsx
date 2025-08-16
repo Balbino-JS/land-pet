@@ -21,7 +21,7 @@ function Home() {
             ipsam voluptates!
           </p>
 
-          <button className="sencondary-button">
+          <button className="secondary-button">
             Fale conosco <FiArrowRight />
           </button>
 
