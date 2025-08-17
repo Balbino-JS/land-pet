@@ -444,3 +444,22 @@ img:hover {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
+/* ==== WORK ==== */
+.work-container {
+  border-radius: 30px;
+  margin: 4rem auto;
+  max-width: 1200px;
+  width: 90%;
+  height: 100vh; /* Ocupa a tela toda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/7-pets.png);
+  background-repeat: no-repeat;
+  background-position: center; /* centraliza a imagem */
+  background-size: 100%; /* controla o tamanho da imagem */
+  margin-top: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}

@@ -7,6 +7,7 @@ import Home from './componentes/Home.jsx';
 import About from './componentes/About.jsx';
 import Info1 from './componentes/Info1.jsx';
 import Info2 from './componentes/Info2.jsx';
+import Work from './componentes/work.jsx';
 
 
 
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
     <Home /> 
     <Info1 />
     <Info2 />
+    <Work />
     <About />
     
   </StrictMode>
