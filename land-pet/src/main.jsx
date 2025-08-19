@@ -12,6 +12,7 @@ import Footer from './componentes/Footer.jsx';
 
 
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
