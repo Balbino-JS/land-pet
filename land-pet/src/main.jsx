@@ -8,6 +8,7 @@ import About from './componentes/About.jsx';
 import Info1 from './componentes/Info1.jsx';
 import Info2 from './componentes/Info2.jsx';
 import Work from './componentes/work.jsx';
+import Footer from './componentes/Footer.jsx';
 
 
 
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
     <Info2 />
     <Work />
     <About />
+    <Footer />
     
   </StrictMode>
 );
