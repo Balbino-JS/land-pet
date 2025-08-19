@@ -490,8 +490,8 @@ img:hover {
 }
 .container .card{
     position: relative;
-    width: 280px;
-    height: 400px;
+    width: 180px;
+    height: 200px;
     margin: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -517,31 +517,32 @@ img:hover {
     position: absolute;
     top: -80px;
     right: 30px;
-    font-size: 8em;
+    font-size: 1em;
     color: rgba(141, 22, 22, 0.035);
     pointer-events: none;
 }
 .container .card .content h3{
-    font-size: 1.8em;
+    font-size: 0.9em;
     color: #f5bbbb;
     z-index: none;
 }
 .container .card .content p{
-    font-size: 1em;
+    font-size: 0.7em;
     color: #807e7e;
     font-weight: 300px;
 }
 .container .card .content a{
     position: relative;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 10px;
     margin-top: 15px;
     background: #f3bebe;
     color: #000;
     text-decoration: none;
     border-radius: 20px;
-    border-width: 500px;
+    border-width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 0.6em;
 }
 .vitrine-work {
   background-color: #161623;

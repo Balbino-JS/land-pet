@@ -19,14 +19,11 @@ function Work() {
         </div>
       </div>
 
-        <h2 className="vitrine-work">Vitrine</h2>
+      <h2 className="vitrine-work">Vitrine</h2>
 
       <div class="container">
-
-      
-
+        <img src="" alt="" />
         <div class="card">
-            
           <div class="content">
             <h2>01</h2>
             <h3>Gatos</h3>
@@ -65,7 +62,7 @@ function Work() {
             <a href="#">Mais Informação</a>
           </div>
         </div>
-         <div class="card">
+        <div class="card">
           <div class="content">
             <h2>03</h2>
             <h3>Cães de grande porte</h3>
@@ -78,7 +75,7 @@ function Work() {
             <a href="#">Mais Informação</a>
           </div>
         </div>
-         <div class="card">
+        <div class="card">
           <div class="content">
             <h2>03</h2>
             <h3>Cães de grande porte</h3>
@@ -91,7 +88,59 @@ function Work() {
             <a href="#">Mais Informação</a>
           </div>
         </div>
-         <div class="card">
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Cães de grande porte</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+              minus dolorum hic aliquid suscipit ipsa commodi, earum voluptatum
+              iure fugit, saepe eos, magnam sequi facere doloribus quos
+              excepturi velit. Eaque!.
+            </p>
+            <a href="#">Mais Informação</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Cães de grande porte</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+              minus dolorum hic aliquid suscipit ipsa commodi, earum voluptatum
+              iure fugit, saepe eos, magnam sequi facere doloribus quos
+              excepturi velit. Eaque!.
+            </p>
+            <a href="#">Mais Informação</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Cães de grande porte</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+              minus dolorum hic aliquid suscipit ipsa commodi, earum voluptatum
+              iure fugit, saepe eos, magnam sequi facere doloribus quos
+              excepturi velit. Eaque!.
+            </p>
+            <a href="#">Mais Informação</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2>03</h2>
+            <h3>Cães de grande porte</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+              minus dolorum hic aliquid suscipit ipsa commodi, earum voluptatum
+              iure fugit, saepe eos, magnam sequi facere doloribus quos
+              excepturi velit. Eaque!.
+            </p>
+            <a href="#">Mais Informação</a>
+          </div>
+        </div>
+        <div class="card">
           <div class="content">
             <h2>03</h2>
             <h3>Cães de grande porte</h3>
@@ -105,7 +154,6 @@ function Work() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
