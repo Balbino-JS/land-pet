@@ -1,30 +1,29 @@
-import { useState } from 'react'
-import '../CSS/App.css'
-import Navbar from './Navbar'
-import Home from './Home'
+import { useState } from "react";
+import "../CSS/App.css";
+import Navbar from "./Navbar";
+import Home from "./Home";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
-  
   return (
-    <footer style={{ textAlign: "center", padding: "20px" }}>
-      <h3>Siga-nos</h3>
-      <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
-        <a href="https://facebook.com" target="_blank" rel="noreferrer">
-          <FaFacebook size={30} color="#1877F2" />
+    <footer className="footer">
+      <h3 className="footer-title">Siga-nos</h3>
+      <div className="footer-icons">
+        <a href="https://www.youtube.com/shorts/XMwDBJ1SBQA" target="_blank" rel="noreferrer">
+          <FaFacebook />
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
-          <FaInstagram size={30} color="#E4405F" />
+        <a href="https://www.youtube.com/shorts/WZOA5TPWa_4" target="_blank" rel="noreferrer">
+          <FaInstagram />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noreferrer">
-          <FaTwitter size={30} color="#1DA1F2" />
+        <a href="https://www.youtube.com/shorts/BL3BFEXvZDo" target="_blank" rel="noreferrer">
+          <FaTwitter />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-          <FaLinkedin size={30} color="#0A66C2" />
+        <a href="https://www.youtube.com/shorts/-KjmRpZRkbo" target="_blank" rel="noreferrer">
+          <FaLinkedin />
         </a>
       </div>
     </footer>
   );
 }
 
-export default Footer
+export default Footer;
