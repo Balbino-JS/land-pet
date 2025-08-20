@@ -10,12 +10,12 @@ import Info2 from './componentes/Info2.jsx';
 import Work from './componentes/work.jsx';
 import Footer from './componentes/Footer.jsx';
 import Whats from './componentes/Whats.jsx';
-
-
+import Testimony from './componentes/Testimo.jsx';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    
     <App />
     <Navbar />
     <Home /> 
@@ -23,8 +23,9 @@ createRoot(document.getElementById('root')).render(
     <Info1 />
     <Info2 />
     <Work />
+    <Testimony />
     <About />
-    <Footer />
+    <Footer />   
     
   </StrictMode>
 );
