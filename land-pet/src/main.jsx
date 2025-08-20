@@ -9,6 +9,7 @@ import Info1 from './componentes/Info1.jsx';
 import Info2 from './componentes/Info2.jsx';
 import Work from './componentes/work.jsx';
 import Footer from './componentes/Footer.jsx';
+import Whats from './componentes/Whats.jsx';
 
 
 
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
     <App />
     <Navbar />
     <Home /> 
+    <Whats />
     <Info1 />
     <Info2 />
     <Work />
