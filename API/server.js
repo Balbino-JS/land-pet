@@ -75,6 +75,6 @@ app.delete('/usuarios/:id', async (req, res) => {
     }
 })
 
-app.listen(5173, () => {
-    console.log('Servidor rodando na porta 5173');
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000');
 });

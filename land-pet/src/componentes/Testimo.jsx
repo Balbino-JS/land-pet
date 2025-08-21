@@ -1,30 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import "../CSS/Testimo.css";
+import api from "../services/Api";
 
 function Testimony() {
-  const users = [
-    {
-      id: "55sd4fg54dfsg",
-      name: "Juliano",
-      testimony: "klsdajifdsaljlkfn",
-    },
-    {
-      id: "55g4fds5g45f",
-      name: "Mayara",
-      testimony: "kkanlgknfslavioijakldm sddioajv",
-    },
-    {
-      di: "8g15fds1g3fd1",
-      name: "Flavia",
-      testimony: "ksdadnlknafgjçalmvkla",
-    },
-  ];
+  const [users, setUsers] = useState([]);
+  const [nome, setNome] = useState("");
+  const [depoimento, setDepoimento] = useState("");
+
+  // Buscar usuários
+  async function getUsers() {
+    try {
+      const response = await api.get("/usuarios");
+      setUsers(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar usuários", error);
+    }
+  }
+
+  // Enviar novo depoimento
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!nome || !depoimento) return alert("Preencha todos os campos!");
+
+    try {
+      await api.post("/usuarios", {
+        name: nome,
+        testimony: depoimento,
+      });
+      setNome("");
+      setDepoimento("");
+      getUsers(); // atualiza a lista
+    } catch (error) {
+      console.error("Erro ao enviar depoimento", error);
+    }
+  }
+
+  // Deletar depoimento
+  async function handleDelete(id) {
+    if (!confirm("Tem certeza que deseja excluir?")) return;
+
+    try {
+      await api.delete(`/usuarios/${id}`);
+      getUsers(); // atualiza a lista após excluir
+    } catch (error) {
+      console.error("Erro ao excluir depoimento", error);
+    }
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <div className="testimony-container">
       <form>
-        <h1>Avaliações de nossos clientes</h1>
+        <h1 className="testimony-text">Avaliações de nossos clientes</h1>
         <input type="text" name="nome" placeholder="Digite seu nome" />
-        <input
+        <textarea
           type="text"
           name="testimonials"
           placeholder="Deixe sua mensagem"
@@ -33,12 +65,16 @@ function Testimony() {
       </form>
 
       {users.map((user) => (
-        <div key={user.id}>
+        <div key={user.id} className="card">
           <div>
-            <p>Nome: {user.name}</p>
-            <p>Depoimento: {user.testimony}</p>
+            <p>
+              Nome: <span>{user.name}</span>
+            </p>
+            <p>
+              Depoimento: <span>{user.testimony}</span>
+            </p>
           </div>
-          <button onClick={() => handleDelete(user.id)}>
+          <button className="fa" onClick={() => handleDelete(user.id)}>
             <i className="fa-solid fa-trash"></i>
           </button>
         </div>
