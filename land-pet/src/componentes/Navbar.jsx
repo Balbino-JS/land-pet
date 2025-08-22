@@ -41,10 +41,10 @@ function Navbar() {
 
         <div className="navbar-links-container">
           <a href="">Home</a>
-          <a href="">Sobre Nós</a>
-          <a href="">Nosso trabalho</a>
-          <a href="">Avaliações</a>
-          <a href="">Contato</a>
+          <a href="#About">Sobre Nós</a>
+          <a href="#Work">Nosso trabalho</a>
+          <a href="#Testimony">Avaliações</a>
+          <a href="#Footer">Contato</a>
           <button className="primary-button">Fale conosco</button>
         </div>
 

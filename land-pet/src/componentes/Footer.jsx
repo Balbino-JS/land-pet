@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" id="Footer">
       <h3 className="footer-title">Siga-nos</h3>
       <div className="footer-icons">
         <a href="https://www.youtube.com/shorts/XMwDBJ1SBQA" target="_blank" rel="noreferrer">

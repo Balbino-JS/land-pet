@@ -5,7 +5,7 @@ import InfoBackground from "../assets/gato-sem-fundo.png";
 
 function Info1() {
   return (
-    <div className="info1-container">
+    <div className="info1-container" >
       <div className="info1-section-container">
         
         <div className="info1-text-container">

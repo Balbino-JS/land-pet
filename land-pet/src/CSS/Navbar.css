@@ -4,9 +4,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
   z-index: 1000;
-   position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

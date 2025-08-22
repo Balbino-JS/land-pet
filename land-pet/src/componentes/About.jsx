@@ -8,7 +8,7 @@ import AboutBackground from '../assets/cao-mulher-abracados.jpg'
 function About() {
   
   return (
-    <div className='about-section-container'>
+    <div className='about-section-container' id='About'>
       <div className="about-background-image-container">
         <img src={AboutBackground} alt="imagen de sobre nos" />
       </div>

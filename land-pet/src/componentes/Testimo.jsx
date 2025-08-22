@@ -53,7 +53,7 @@ function Testimony() {
   }, []);
 
   return (
-    <div className="testimony-container">
+    <div className="testimony-container" id="Testimony">
       <form onSubmit={handleSubmit}>
         <h1 className="testimony-text">Avaliações de nossos clientes</h1>
         <input type="text" name="nome" placeholder="Digite seu nome" value={nome}

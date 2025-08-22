@@ -1,7 +1,7 @@
 
 /*===== HOME ====*/
 .home-container {
-  margin-top: 2rem;
+  margin-top: 6rem;
   width: 100%;
 }
 .home-banner-container {
@@ -35,7 +35,7 @@ img:hover {
   justify-content: center;
 }
 .primary-heading {
-  color: #4c4c4c;
+  color: #302f2f;
   font-size: clamp(2rem, 5vw, 4rem);
   margin: 20px;
   max-width: 600px;
@@ -57,8 +57,8 @@ img:hover {
 .secondary-button:hover {
   background-color: rgb(250, 150, 163);
 }
-.primary-text {
-  color: #6a6a6a;
+.text {
+  color: #636060;
   font-size: 1.25rem;
   margin: 1.5rem 0rem;
 }
