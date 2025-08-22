@@ -16,7 +16,6 @@ import Testimony from './componentes/Testimo.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     
-    <App />
     <Navbar />
     <Home /> 
     <Whats />

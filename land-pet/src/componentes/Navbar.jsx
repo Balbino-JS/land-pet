@@ -28,7 +28,7 @@ function Navbar() {
   ]
 
   return (
-    <div className="home-container">
+    <div className="nav-container">
       <nav>
         <div className="nav-logo-container">
           <img
@@ -56,6 +56,11 @@ function Navbar() {
           open={openMenu}
           onClose={() => setOpenMenu(false)}
           anchor="right"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.3)",
+             backdropFilter: "blur(12px) saturate(150%)",
+          }}
+
         >
           <Box
             sx={{ width: 250 }}
@@ -67,8 +72,8 @@ function Navbar() {
               {menuOptions.map((item) => (
                 <ListItem key={item.text} disablePadding>
                   <ListItemButton>
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                    <ListItemText primary={item.text} />
+                    <ListItemIcon style={{color:"#ffb6c1"}}>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.text} style={{color:"#333", fontWeight:200}} />
                   </ListItemButton>
                 </ListItem>
               ))}

@@ -42,224 +42,129 @@
 /* Cards */
 .container {
   background: #161623;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: stretch;      /* todas as células com mesma altura */
+  justify-items: center;
   padding: 2rem;
   z-index: 1;
 }
 
+/* ====== Card base ====== */
 .container .card {
   position: relative;
-  width: 180px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 3 / 4;       /* todos com a mesma proporção = alinhados */
+  min-width: 220px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.3s;
 }
 
-.container .card:hover {
-  transform: translateY(-10px);
-}
+.container .card:hover { transform: translateY(-10px); }
 
-/* Imagem do card */
+/* Imagem */
 .container .card .card-img {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
   transition: 0.5s;
 }
+.container .card:hover .card-img { filter: brightness(70%); }
 
-.container .card:hover .card-img {
-  filter: brightness(70%);
-}
-
-/* Conteúdo do card */
+/* ====== Conteúdo ====== */
 .container .card .content {
-  position: relative;
+  position: absolute;
+  inset: auto 0 0 0;      /* encosta no rodapé do card */
   z-index: 1;
-  padding: 20px;
+  padding: 16px 14px;
   text-align: center;
-  transform: translateY(100px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-end;
+
   opacity: 0;
-  transition: 0.5s;
+  transform: translateY(20px);
+  transition: 0.35s;
 }
 
 .container .card:hover .content {
-  transform: translateY(0);
   opacity: 1;
+  transform: translateY(0);
 }
 
-.container .card .content h2 {
-  position: absolute;
-  top: -80px;
-  right: 30px;
-  font-size: 1em;
-  color: rgba(141, 22, 22, 0.035);
-  pointer-events: none;
-}
-
+/* Título / Texto / Botão */
 .container .card .content h3 {
-  font-size: 0.9em;
+  margin: 0;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
   color: #f5bbbb;
 }
 
 .container .card .content p {
-  font-size: 0.7em;
+  margin: 0;
+  line-height: 1.4;
+  font-size: clamp(0.75rem, 0.9vw, 0.95rem);
   color: #fff;
   font-weight: 300;
+  max-width: 90%;
+  word-break: normal;
+  overflow-wrap: break-word; /* evita “empilhar” letras */
 }
 
 .container .card .content a {
+  pointer-events: auto;
   display: inline-block;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 10px 14px;
+  margin-top: 0.4rem;
   background: #f3bebe;
   color: #000;
   text-decoration: none;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  font-size: 0.6em;
+  font-size: clamp(0.7rem, 0.9vw, 0.9rem);
 }
 
-/* ==== RESPONSIVO ==== */
+/* ====== Breakpoints ====== */
 
-/* 1440px */
+/* 1200–1440px: 4 colunas se faltar espaço */
 @media (max-width: 1440px) {
-  .work-container {
-    height: 90vh;
-  }
-  .container .card {
-    width: 160px;
-    height: 190px;
-  }
-  .container .card .content h3 {
-    font-size: 0.85em;
-  }
-  .container .card .content p {
-    font-size: 0.65em;
-  }
-  .container .card .content a {
-    font-size: 0.55em;
-  }
+  .container { grid-template-columns: repeat(5, minmax(200px, 1fr)); }
+  .work-container { height: 90vh; }
 }
 
-/* 1024px */
+/* ≤1200px: 4 colunas */
+@media (max-width: 1200px) {
+  .container { grid-template-columns: repeat(4, minmax(200px, 1fr)); }
+}
+
+/* ≤1024px: 3 colunas */
 @media (max-width: 1024px) {
-  .work-container {
-    height: 80vh;
-  }
-  .work-section-text {
-    margin-bottom: 30%;
-  }
-  .container .card {
-    width: 150px;
-    height: 180px;
-  }
-  .container .card .content h3 {
-    font-size: 0.8em;
-  }
-  .container .card .content p {
-    font-size: 0.6em;
-  }
-  .container .card .content a {
-    font-size: 0.5em;
-  }
+  .work-container { height: 80vh; }
+  .work-section-text { margin-bottom: 30%; }
+  .container { grid-template-columns: repeat(3, minmax(200px, 1fr)); }
 }
 
-/* 768px */
+/* ≤768px: 2 colunas */
 @media (max-width: 768px) {
-  .work-container {
-    height: 70vh;
-  }
-  .work-section-text {
-    margin-bottom: 25%;
-  }
-  .container .card {
-    width: 140px;
-    height: 170px;
-  }
-  .container .card .content h3 {
-    font-size: 0.75em;
-  }
-  .container .card .content p {
-    font-size: 0.55em;
-  }
-  .container .card .content a {
-    font-size: 0.45em;
-  }
+  .work-container { height: 70vh; }
+  .work-section-text { margin-bottom: 25%; }
+  .container { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
 }
 
-/* 480px */
+/* ≤480px: 1 coluna + conteúdo sempre visível (sem hover) */
 @media (max-width: 480px) {
-  .work-container {
-    height: auto;
-    padding: 1rem;
-  }
-  .work-section-text {
-    margin-bottom: 20%;
-  }
-  .primary-work {
-    font-size: 1.5rem;
-  }
-  .work-text {
-    font-size: 0.9rem;
-  }
-  .vitrine-work {
-    font-size: 1.2rem;
-    margin: 2rem 0;
-  }
-  .container .card {
-    width: 130px;
-    height: 160px;
-  }
-  .container .card .content h3 {
-    font-size: 0.7em;
-  }
-  .container .card .content p {
-    font-size: 0.5em;
-  }
-  .container .card .content a {
-    font-size: 0.4em;
-  }
-}
-
-/* 320px */
-@media (max-width: 320px) {
-  .work-section-text {
-    margin-bottom: 15%;
-  }
-  .primary-work {
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
-  .work-text {
-    font-size: 0.8rem;
-  }
-  .vitrine-work {
-    font-size: 1rem;
-    margin: 1rem 0;
-  }
-  .container .card {
-    width: 120px;
-    height: 150px;
-    margin: 15px;
-  }
-  .container .card .content h3 {
-    font-size: 0.65em;
-  }
-  .container .card .content p {
-    font-size: 0.45em;
-  }
-  .container .card .content a {
-    font-size: 0.35em;
-    padding: 8px;
-  }
+  .work-container { height: auto; padding: 1rem; }
+  .work-section-text { margin-bottom: 20%; }
+  .container { grid-template-columns: 1fr; gap: 1.2rem; }
+  .container .card { aspect-ratio: unset; min-height: 260px; }
+  .container .card .content { opacity: 1; transform: none; }
 }

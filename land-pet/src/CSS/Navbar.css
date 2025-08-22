@@ -1,10 +1,15 @@
 /* ===== Navegação ===== */
 nav {
   background: linear-gradient(to right, #f7b6c1, #fcdde3, #ffffff);
-  align-items: center;
   display: flex;
   justify-content: space-between;
-  min-height: 90px;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .navbar-links-container a {
