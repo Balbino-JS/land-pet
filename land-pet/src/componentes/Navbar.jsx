@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import '../CSS/App.css'
+import '../CSS/Navbar.css'
 import Logo from "../assets/logo.jpg"
 import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"

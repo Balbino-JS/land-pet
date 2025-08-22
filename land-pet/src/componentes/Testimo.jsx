@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../CSS/App.css"
 import "../CSS/Testimo.css";
 import api from "../services/Api";
 
@@ -53,15 +54,18 @@ function Testimony() {
 
   return (
     <div className="testimony-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h1 className="testimony-text">Avaliações de nossos clientes</h1>
-        <input type="text" name="nome" placeholder="Digite seu nome" />
+        <input type="text" name="nome" placeholder="Digite seu nome" value={nome}
+          onChange={(e) => setNome(e.target.value)} />
         <textarea
           type="text"
           name="testimonials"
-          placeholder="Deixe sua mensagem"
+          placeholder="Deixe sua mensagem" 
+          value={depoimento}
+          onChange={(e) => setDepoimento(e.target.value)}
         />
-        <button type="submit">Enviar</button>
+        <button type="submit" onClick={'Sua nebsagem foi enviada com sucesso'}>Enviar</button>
       </form>
 
       {users.map((user) => (

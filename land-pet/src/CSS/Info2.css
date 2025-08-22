@@ -1,0 +1,132 @@
+
+/* ==== INFO2 ==== */
+.info2-container {
+  width: 100%;
+  min-height: 100vh; /* altura mínima em vez de fixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: lighten; /* mistura cor + imagem */
+  background-color: rgba(217, 217, 217, 0.8); /* cinza com transparência */
+  background-image: url(../assets/pantinhas-subindo-esquerda-removebg-preview-sem-fundos.png);
+  background-position: center;
+  background-size: contain; /* ajusta sem cortar */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.info2-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* evita quebra estranha em telas menores */
+  max-width: 1200px;
+  width: 100%;
+}
+
+.info2-image img {
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.info2-text { 
+  flex: 1;
+  text-align: left;
+}
+
+.info2-text h2 {
+  color: #fca8b9;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info2-text p {
+  color: rgb(62, 41, 82);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVIDADE INFO2 ===== */
+
+/* Telas muito grandes (24" ~ 1440px+) */
+@media (min-width: 1440px) {
+  .info2-text h2 {
+    font-size: 2.5rem;
+  }
+  .info2-text p {
+    font-size: 1.3rem;
+  }
+  .info2-image img {
+    max-width: 350px;
+  }
+}
+
+/* Notebooks e tablets grandes (até 1024px) */
+@media (max-width: 1024px) {
+  .info2-content {
+    gap: 1.5rem;
+  }
+  .info2-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .info2-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .info2-image img {
+    max-width: 240px;
+  }
+}
+
+/* Tablets e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .info2-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .info2-image img {
+    max-width: 70%;
+  }
+  .info2-text h2 {
+    font-size: 1.8rem;
+  }
+  .info2-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares médios/pequenos (até 480px) */
+@media (max-width: 480px) {
+  .info2-content {
+    gap: 1rem;
+  }
+  .info2-image img {
+    max-width: 80%;
+  }
+  .info2-text h2 {
+    font-size: 1.5rem;
+  }
+  .info2-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media (max-width: 320px) {
+  .info2-image img {
+    max-width: 95%;
+  }
+  .info2-text h2 {
+    font-size: 1.2rem;
+  }
+  .info2-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}

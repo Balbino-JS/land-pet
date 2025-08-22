@@ -1,0 +1,211 @@
+/* ===== Navegação ===== */
+nav {
+  background: linear-gradient(to right, #f7b6c1, #fcdde3, #ffffff);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+.navbar-links-container a {
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 2rem;
+  outline: none;
+  text-decoration: none;
+}
+
+.navbar-menu-container {
+  display: none;
+}
+
+.primary-button {
+  background-color: rgba(247, 182, 193);
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 2rem;
+  outline: none;
+  padding: 0.8rem 1.75rem;
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  background-color: rgb(250, 150, 163);
+}
+
+/* ===== Logo ===== */
+.nav-logo-container {
+  margin-left: 2rem;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.nav-logo-container:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.img-arredondada {
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.texto-sobre-imagem {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Telas muito grandes (24" ~ 1440px+) */
+@media (min-width: 1440px) {
+  nav {
+    padding: 0 6rem;
+  }
+  .navbar-links-container a {
+    font-size: 1.2rem;
+    margin-right: 2.5rem;
+  }
+  .primary-button {
+    font-size: 1.2rem;
+    padding: 1rem 2.2rem;
+  }
+  .img-arredondada {
+    width: 260px;
+  }
+}
+
+/* Notebooks e tablets grandes (até 1024px) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 3rem;
+  }
+  .navbar-links-container a {
+    font-size: 1rem;
+    margin-right: 1.5rem;
+  }
+  .primary-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+  .img-arredondada {
+    width: 180px;
+  }
+}
+
+/* Tablets e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .nav-logo-container {
+    max-width: 100px;
+  }
+  .navbar-links-container {
+    display: none;
+  }
+  .navbar-menu-container {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar-menu-container svg {
+    font-size: 2rem;
+  }
+
+  /* Responsivo da Home */
+  .home-bannerImage-container {
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    max-width: 450px;
+    width: 300px;
+  }
+  .home-banner-container,
+  .aboult-section-container {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .aboult-setion-container {
+    flex-direction: column;
+  }
+  .aboult-section-image-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  .primary-heading {
+    text-align: center;
+    max-width: 90%;
+  }
+  .primary-text {
+    text-align: center;
+    max-width: 80%;
+  }
+  .home-text-section {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .secondary-button {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+}
+
+/* Celulares médios/pequenos (até 480px) */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+    min-height: auto;
+  }
+  .nav-logo-container {
+    margin: 0 auto 1rem auto;
+  }
+  .primary-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .img-arredondada {
+    width: 150px;
+  }
+  .texto-sobre-imagem {
+    font-size: 18px;
+    left: 120%;
+  }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media (max-width: 320px) {
+  .primary-heading {
+    font-size: 1.2rem;
+  }
+  .primary-text {
+    font-size: 0.9rem;
+  }
+  .primary-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+  .img-arredondada {
+    width: 120px;
+  }
+  .texto-sobre-imagem {
+    font-size: 14px;
+    left: 110%;
+  }
+}

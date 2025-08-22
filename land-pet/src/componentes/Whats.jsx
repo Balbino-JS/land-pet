@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../CSS/App.css";
+import "../CSS/Whats.css"
 import { FaWhatsapp } from "react-icons/fa";
 
 function Whats() {

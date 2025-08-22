@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../CSS/App.css";
+import "../CSS/Work.css"
 import GatinhosBackground from "../assets/crianca-gatos.jpg";
 import MulherolhandoCao from "../assets/mulher-olhando-cao.jpg";
 import PiscinaCachorro from "../assets/piscina-cachorro.jpg";

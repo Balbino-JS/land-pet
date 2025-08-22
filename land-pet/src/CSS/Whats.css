@@ -1,0 +1,48 @@
+/* ==== WHATSAPP ==== */
+.whats-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Link e ícone do WhatsApp */
+.whats-float a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Cor oficial do WhatsApp */
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de hover para o botão */
+.whats-float a:hover {
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+/* Estilização do ícone */
+.whats-float a svg {
+  font-size: 36px;
+}
+
+/* Media Query para responsividade em telas menores (smartphones) */
+@media (max-width: 768px) {
+  .whats-float {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whats-float a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whats-float a svg {
+    font-size: 30px;
+  }
+}

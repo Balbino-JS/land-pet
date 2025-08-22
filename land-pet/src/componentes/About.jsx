@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../CSS/App.css'
-import Navbar from './Navbar'
-import Home from './Home'
+import "../CSS/About.css"
 import AboutBackground from '../assets/cao-mulher-abracados.jpg'
 
 

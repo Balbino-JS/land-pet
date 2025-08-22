@@ -1,0 +1,139 @@
+/* ==== INFO1 ==== */
+.info1-container {
+  background-color: #4c4c4c;
+  border: none;
+  border-radius: 30px;
+  margin: 4rem auto;
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+}
+
+.info1-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: nowrap;
+}
+
+/* Imagem à direita */
+.info1-section-container img {
+  align-self: flex-end;
+  flex: 1;
+  max-width: 35%;   /* controla tamanho da imagem */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Texto à esquerda */
+.info1-text-container {
+  color: #f7b6c1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.info1-heading {
+  color: #ffffff;   /* branco para contraste com fundo escuro */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.primary-text {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVIDADE INFO1 ===== */
+
+/* Telas muito grandes (24" ~ 1440px+) */
+@media (min-width: 1440px) {
+  .info1-container {
+    padding: 3rem 4rem;
+  }
+  .info1-heading {
+    font-size: 2rem;
+  }
+  .primary-text {
+    font-size: 1.3rem;
+  }
+  .info1-section-container img {
+    max-width: 40%;
+  }
+}
+
+/* Notebooks e tablets grandes (até 1024px) */
+@media (max-width: 1024px) {
+  .info1-container {
+    padding: 2rem;
+  }
+  .info1-heading {
+    font-size: 1.7rem;
+  }
+  .primary-text {
+    font-size: 1rem;
+  }
+  .info1-section-container {
+    gap: 2rem;
+  }
+  .info1-section-container img {
+    max-width: 45%;
+  }
+}
+
+/* Tablets e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .info1-section-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .info1-text-container {
+    text-align: center;
+  }
+  .info1-section-container img {
+    max-width: 70%;
+  }
+  .info1-heading {
+    font-size: 1.5rem;
+  }
+  .primary-text {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares médios/pequenos (até 480px) */
+@media (max-width: 480px) {
+  .info1-container {
+    padding: 1.5rem;
+  }
+  .info1-heading {
+    font-size: 1.3rem;
+  }
+  .primary-text {
+    font-size: 0.95rem;
+  }
+  .info1-section-container img {
+    max-width: 90%;
+  }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media (max-width: 320px) {
+  .info1-heading {
+    font-size: 1.1rem;
+  }
+  .primary-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .info1-section-container img {
+    max-width: 100%;
+  }
+}

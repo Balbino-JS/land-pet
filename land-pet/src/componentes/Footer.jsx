@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../CSS/App.css";
-import Navbar from "./Navbar";
-import Home from "./Home";
+import "../CSS/Footer.css"
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {

@@ -1,5 +1,5 @@
 import "../CSS/App.css";
-import Navbar from "./Navbar";
+import "../CSS/Home.css"
 import BannerBackground from "../assets/three-dogs.jpg";
 import { FiArrowRight } from "react-icons/fi";
 

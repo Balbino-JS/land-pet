@@ -1,0 +1,61 @@
+
+/* ==== FOOTER ==== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f7b6c1, #fcdde3, #ffffff);
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-icons a {
+  font-size: 30px; /* tamanho padrão dos ícones */
+  color: #555;
+  transition: transform 0.3s, color 0.3s;
+}
+
+/* Efeitos hover */
+.footer-icons a:hover {
+  transform: scale(1.2);
+  color: #0077b6; /* muda a cor no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-icons {
+    gap: 15px;
+  }
+
+  .footer-icons a {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-icons {
+    flex-wrap: wrap; /* quebra linha se faltar espaço */
+    gap: 10px;
+  }
+
+  .footer-icons a {
+    font-size: 24px;
+  }
+}

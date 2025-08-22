@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../CSS/App.css";
-import Navbar from "./Navbar";
-import Home from "./Home";
+import "../CSS/Info1.css"
 import InfoBackground from "../assets/gato-sem-fundo.png";
 
 function Info1() {

@@ -1,0 +1,156 @@
+/* ==== ABOUT ==== */
+.about-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Desktop → texto à esquerda, imagem à direita */
+}
+
+.about-background-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* garante que a imagem fique colada à direita */
+}
+
+.about-background-image-container img {
+  max-width: 450px;
+  min-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.about-background-image-container img:hover {
+  transform: scale(1.05);
+}
+
+.about-section-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-section-text-container .primary-subheading {
+  color: rgb(253, 127, 148);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-section-text-container .primary-heading {
+  color: #4c4c4c;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.about-section-text-container .primary-text {
+  color: #6a6a6a;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+/* ==== RESPONSIVIDADE ABOUT ==== */
+
+/* Telas muito grandes (24" ~ 1440px+) */
+@media (min-width: 1440px) {
+  .about-section-text-container .primary-subheading {
+    font-size: 2.3rem;
+  }
+  .about-section-text-container .primary-heading {
+    font-size: 2.2rem;
+  }
+  .about-section-text-container .primary-text {
+    font-size: 1.3rem;
+  }
+  .about-background-image-container img {
+    max-width: 500px;
+  }
+}
+
+/* Notebooks e tablets grandes (até 1024px) */
+@media (max-width: 1024px) {
+  .about-section-container {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+  .about-section-text-container .primary-subheading {
+    font-size: 2rem;
+  }
+  .about-section-text-container .primary-heading {
+    font-size: 1.8rem;
+  }
+  .about-section-text-container .primary-text {
+    font-size: 1rem;
+  }
+  .about-background-image-container img {
+    max-width: 380px;
+  }
+}
+
+/* Tablets e celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .about-section-container {
+    flex-direction: column; /* empilha imagem e texto */
+    text-align: center;
+  }
+  .about-background-image-container {
+    justify-content: center;
+  }
+  .about-section-text-container {
+    text-align: center;
+  }
+  .about-section-text-container .primary-subheading {
+    font-size: 1.8rem;
+  }
+  .about-section-text-container .primary-heading {
+    font-size: 1.6rem;
+  }
+  .about-background-image-container img {
+    max-width: 70%;
+  }
+}
+
+/* Celulares médios/pequenos (até 480px) */
+@media (max-width: 480px) {
+  .about-section-container {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .about-section-text-container .primary-subheading {
+    font-size: 1.5rem;
+  }
+  .about-section-text-container .primary-heading {
+    font-size: 1.3rem;
+  }
+  .about-section-text-container .primary-text {
+    font-size: 0.95rem;
+  }
+  .about-background-image-container img {
+    max-width: 85%;
+  }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media (max-width: 320px) {
+  .about-section-text-container .primary-subheading {
+    font-size: 1.3rem;
+  }
+  .about-section-text-container .primary-heading {
+    font-size: 1.1rem;
+  }
+  .about-section-text-container .primary-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .about-background-image-container img {
+    max-width: 95%;
+  }
+}

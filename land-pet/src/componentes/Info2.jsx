@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../CSS/App.css";
+import "../CSS/Info2.css"
 import InfoBackground from '../assets/caes-brincando_-removebg-preview.png'
 import Info1Background from '../assets/gatos-brincando3-removebg-preview.png'
 
